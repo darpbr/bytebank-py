@@ -17,7 +17,7 @@ class TestClass:
 
         assert resultado == esperado
 
-    def test_quando_sobrenome_recebe_lucas_carvalho_deve_retornar_carvahlo(self):
+    def test_quando_sobrenome_recebe_lucas_carvalho_deve_retornar_carvalho(self):
         """Teste de Sobrenome do funcionário
         """
         entrada = 'Lucas Carvalho '
@@ -27,6 +27,18 @@ class TestClass:
         resultado = lucas.sobrenome()
 
         assert resultado == esperado
+
+    def test_quando_nome_recebe_lucas_carvalho_deve_retornar_Lucas_Carvalho(self):
+        """Teste de Sobrenome do funcionário
+        """
+        entrada = 'Lucas Carvalho'
+        esperado = 'Lucas Carvalho'
+
+        lucas = Funcionario(entrada, '11/11/2000',1000)
+        resultado = lucas.nome
+
+        assert resultado == esperado
+
 
     def test_quando_decrescimo_salario_recebe_100_mil_deve_retornar_90_mil(self):
         """teste da funcionalidade de decrescimo de salario
